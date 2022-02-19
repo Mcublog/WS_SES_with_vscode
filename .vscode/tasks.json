@@ -1,0 +1,66 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"label": "Build: debug",
+			"command": "emBuild",
+			"args": [
+				"-config",
+				"Debug",
+				"-project",
+				"Ws_project",
+				"Ws_project.emProject",
+				"-verbose"
+			],
+			"presentation": {
+				"reveal": "always",
+				"echo": false
+			},
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		},
+		{
+			"type": "shell",
+			"label": "Build: release",
+			"command": "emBuild",
+			"args": [
+				"-config",
+				"Release",
+				"-project",
+				"Ws_project",
+				"Ws_project.emProject",
+				"-verbose"
+			],
+			"presentation": {
+				"reveal": "always",
+				"echo": false
+			},
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		},
+		{
+			"type": "shell",
+			"label": "Build: clean all",
+			"command": "Remove-Item",
+			"args": [
+				"Output",
+				"-Recurse",
+				"-Force",
+				"-Confirm:$false"
+			],
+			"presentation": {
+				"reveal": "never",
+				"echo": false
+			},
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		}
+	]
+}
