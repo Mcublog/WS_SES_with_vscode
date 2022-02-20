@@ -16,10 +16,10 @@
             "device": "STM32F407VE",
             "interface": "swd",
             "serialNumber": "", //If you have more than one J-Link probe, add the serial number here.
-            // "runToEntryPoint": "main",
-            "svdFile": "${workspaceRoot}/Svd/STM32F407.svd"
+            "runToEntryPoint": "main",
+            "svdFile": "${workspaceRoot}/Svd/STM32F407.svd",
             // "debuggerArgs": ["-timeout 5000"]
-            //"preLaunchTask": "Build: debug",
+            // "preLaunchTask": "Build: debug",
             // "showDevDebugOutput":"parsed",
             // "debugServer": 19021
         }

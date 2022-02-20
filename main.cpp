@@ -23,14 +23,14 @@ Purpose : Generic application start
 volatile long sraka = 122;
 void dupa_test(const int dupa)
 {
-  printf("%d\n", dupa);
+  printf("%d\r\n", dupa);
 }
 
 int main(void) {
   int i;
 
   for (i = 0; i < 100; i++) {
-    printf("Hello World %d!\n", i);
+    printf("Hello World %d!\r\n", i);
     dupa_test(sraka);
   }
   do {
