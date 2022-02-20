@@ -1,0 +1,3 @@
+3>D:\Projects\Mcu\WS_SES_with_vscode\main.cpp:34:20: error: too few arguments to function 'void dupa_test(int, int)'
+3>D:\Projects\Mcu\WS_SES_with_vscode\main.cpp:24:6: note: declared here
+There were 1 build errors

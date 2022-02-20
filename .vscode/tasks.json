@@ -11,11 +11,14 @@
 				"-project",
 				"Ws_project",
 				"Ws_project.emProject",
-				"-verbose"
+				"-verbose",
+				"2>",
+				"debug_err.log"
 			],
 			"presentation": {
 				"reveal": "always",
-				"echo": false
+				"echo": false,
+				"clear": true
 			},
 			"group": {
 				"kind": "build",

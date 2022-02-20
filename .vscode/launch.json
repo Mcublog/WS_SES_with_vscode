@@ -5,6 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Color",
+            "type": "python",
+            "request": "launch",
+            "program": "color.py",
+            "console": "integratedTerminal"
+        },
+        {
             "type": "cortex-debug",
             "request": "launch",
             "name": "Debug J-Link",
