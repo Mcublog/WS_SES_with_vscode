@@ -24,6 +24,7 @@ volatile long sraka = 122;
 void dupa_test(const int dupa)
 {
   printf("%d\r\n", dupa);
+  #pragma GCC warning "TODO: SetKeyRequiredFeedback"
 }
 
 int main(void) {

@@ -8,7 +8,11 @@
             "name": "Color",
             "type": "python",
             "request": "launch",
-            "program": "color.py",
+            "program": "colorize.py",
+            "args": [
+                "--command",
+                "emBuild -time -config Debug -project ${config:ses_project} ${config:ses_project}.emProject -verbose  "
+            ],
             "console": "integratedTerminal"
         },
         {

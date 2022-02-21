@@ -2,18 +2,13 @@
 	"version": "2.0.0",
 	"tasks": [
 		{
-			"type": "shell",
+			"type": "process",
 			"label": "Build: debug",
-			"command": "emBuild",
+			"command": "py",
 			"args": [
-				"-config",
-				"Debug",
-				"-project",
-				"Ws_project",
-				"Ws_project.emProject",
-				"-verbose",
-				"2>",
-				"debug_err.log"
+				"colorize.py",
+				"--command",
+				"emBuild -config Debug -project ${config:ses_project} ${config:ses_project}.emProject -verbose"
 			],
 			"presentation": {
 				"reveal": "always",
