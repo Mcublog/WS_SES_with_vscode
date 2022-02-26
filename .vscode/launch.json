@@ -11,7 +11,7 @@
             "program": "colorize.py",
             "args": [
                 "--command",
-                "emBuild -time -config Debug -project ${config:ses_project} ${config:ses_project}.emProject -verbose  "
+                "emBuild -time -config Debug -project ${config:ses_project} ${config:ses_project}.emProject -verbose"
             ],
             "console": "integratedTerminal"
         },
@@ -20,19 +20,18 @@
             "request": "launch",
             "name": "Debug J-Link",
             "cwd": "${workspaceRoot}",
-            "executable": "${workspaceRoot}/Output/Debug/Exe/Ws_project.elf",
-            // "serverpath": "/opt/SEGGER/JLink/JLinkGDBServerCLExe",
-            "serverpath": "C:/Program Files (x86)/SEGGER/JLink/JLinkGDBServerCL.exe",
+            "executable": "${workspaceRoot}/Output/Debug/Exe/${config:ses_project}.elf",
             "servertype": "jlink",
             "device": "STM32F407VE",
             "interface": "swd",
             "serialNumber": "", //If you have more than one J-Link probe, add the serial number here.
             "runToEntryPoint": "main",
             "svdFile": "${workspaceRoot}/Svd/STM32F407.svd",
-            // "debuggerArgs": ["-timeout 5000"]
-            // "preLaunchTask": "Build: debug",
-            // "showDevDebugOutput":"parsed",
-            // "debugServer": 19021
+            "breakAfterReset": true,
+            "serverArgs": [
+                "-gui"
+            ],
+            "preLaunchTask": "Build: debug"
         }
     ]
 }

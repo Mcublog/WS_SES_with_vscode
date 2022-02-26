@@ -2,18 +2,14 @@
 	"version": "2.0.0",
 	"tasks": [
 		{
-			"type": "process",
+			"type": "shell",
 			"label": "Build: debug",
-			"command": "py",
-			"args": [
-				"colorize.py",
-				"--command",
+			"command": [
 				"emBuild -config Debug -project ${config:ses_project} ${config:ses_project}.emProject -verbose"
 			],
 			"presentation": {
 				"reveal": "always",
-				"echo": false,
-				"clear": true
+				"echo": false
 			},
 			"group": {
 				"kind": "build",
@@ -23,14 +19,8 @@
 		{
 			"type": "shell",
 			"label": "Build: release",
-			"command": "emBuild",
-			"args": [
-				"-config",
-				"Release",
-				"-project",
-				"Ws_project",
-				"Ws_project.emProject",
-				"-verbose"
+			"command": [
+				"emBuild -config Release -project ${config:ses_project} ${config:ses_project}.emProject -verbose"
 			],
 			"presentation": {
 				"reveal": "always",
@@ -44,16 +34,13 @@
 		{
 			"type": "shell",
 			"label": "Build: clean all",
-			"command": "Remove-Item",
-			"args": [
-				"Output",
-				"-Recurse",
-				"-Force",
-				"-Confirm:$false"
+			"command": [
+				"emBuild -config Debug -clean Ws_project.emProject;",
+				"emBuild -config Release -clean Ws_project.emProject;"
 			],
 			"presentation": {
 				"reveal": "never",
-				"echo": false
+				"echo": true
 			},
 			"group": {
 				"kind": "build",

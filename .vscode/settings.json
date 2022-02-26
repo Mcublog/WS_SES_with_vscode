@@ -1,5 +1,6 @@
 {
-    "cortex-debug.armToolchainPath.windows": "C:/Program Files (x86)/GNU Tools ARM Embedded/8 2018-q4-major/bin/",
+    "cortex-debug.armToolchainPath.windows": "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/",
+    // "cortex-debug.armToolchainPath.windows": "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/",
     "cortex-debug.armToolchainPath.linux": "/usr/bin",
     "ses_project":"Ws_project"
 }
