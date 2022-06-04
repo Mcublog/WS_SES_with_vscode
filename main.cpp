@@ -30,9 +30,10 @@ void dupa_test(const int dupa)
 int main(void) {
   int i;
 
-  for (i = 0; i < 100; i++) {
+  for (;;) {
     printf("Hello World %d!\r\n", i);
     dupa_test(sraka);
+    for (volatile int i = 0; i < 100000; i++) {}
   }
   do {
     i++;
