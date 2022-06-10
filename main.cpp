@@ -12,6 +12,7 @@ Purpose : Generic application start
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 /*********************************************************************
 *
@@ -20,23 +21,27 @@ Purpose : Generic application start
 *  Function description
 *   Application entry point.
 */
-volatile long sraka = 122;
-void dupa_test(const int dupa)
+volatile long variable = 122;
+void test_func(const int dupa)
 {
-  printf("%d\r\n", dupa);
+  printf("%s\r\n", __func__);
   #pragma GCC warning "TODO: SetKeyRequiredFeedback"
 }
 
 int main(void) {
-  int i;
+  int d;
+  char input_buf[256] = {0};
 
   for (;;) {
-    printf("Hello World %d!\r\n", i);
-    dupa_test(sraka);
+    putchar('a');
+    int d = scanf("%s", input_buf);
+    printf("RX[%d]: %s", d, input_buf);
+    printf("\r\n");
+    test_func(variable);
     for (volatile int i = 0; i < 100000; i++) {}
   }
   do {
-    i++;
+    d++;
   } while (1);
 }
 

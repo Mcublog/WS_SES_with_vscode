@@ -47,7 +47,7 @@ define memory with size = 4G;
 // Combined regions per memory type
 //
 define region FLASH = FLASH1;
-define region RAM   = RAM1 + CCM_RAM1;
+define region RAM   = RAM1;// + CCM_RAM1;
 
 //
 // Block definitions
